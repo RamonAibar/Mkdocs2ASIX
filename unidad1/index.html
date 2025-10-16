@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Titul de proba - ASIX2 Administració de Sistemes</title>
+        <title>Creacio d'un Target i Servei amb un script en linux - ASIX2 Administració de Sistemes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#titul-de-proba" class="md-skip">
+        <a href="#creacio-dun-target-i-servei-amb-un-script-en-linux" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Titul de proba
+              Creacio d'un Target i Servei amb un script en linux
             
           </span>
         </div>
@@ -375,7 +375,7 @@
   
   
   <span class="md-ellipsis">
-    Titul de proba
+    Creacio d'un Target i Servei amb un script en linux
     
   </span>
   
@@ -388,7 +388,7 @@
   
   
   <span class="md-ellipsis">
-    Titul de proba
+    Creacio d'un Target i Servei amb un script en linux
     
   </span>
   
@@ -411,9 +411,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#leccion-1-que-es-la-ia-de-la-mente-humana-a-las-maquinas-inteligentes" class="md-nav__link">
+  <a href="#que-es-un-target" class="md-nav__link">
     <span class="md-ellipsis">
-      Lección 1. ¿Qué es la IA? De la mente humana a las máquinas inteligentes
+      Que es un target
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      Que es un servei
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creacio d'un target
     </span>
   </a>
   
@@ -462,9 +480,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#leccion-1-que-es-la-ia-de-la-mente-humana-a-las-maquinas-inteligentes" class="md-nav__link">
+  <a href="#que-es-un-target" class="md-nav__link">
     <span class="md-ellipsis">
-      Lección 1. ¿Qué es la IA? De la mente humana a las máquinas inteligentes
+      Que es un target
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-servei" class="md-nav__link">
+    <span class="md-ellipsis">
+      Que es un servei
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-dun-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creacio d'un target
     </span>
   </a>
   
@@ -486,12 +522,91 @@
 
 
 
-<h1 id="titul-de-proba">Titul de proba</h1>
-<h2 id="leccion-1-que-es-la-ia-de-la-mente-humana-a-las-maquinas-inteligentes">Lección 1. ¿Qué es la IA? De la mente humana a las máquinas inteligentes</h2>
+<h1 id="creacio-dun-target-i-servei-amb-un-script-en-linux">Creacio d'un Target i Servei amb un script en linux</h1>
+<h2 id="que-es-un-target">Que es un target</h2>
+<p>Un <strong>target</strong> a Linux (especialment en sistemes amb <em>systemd</em>) és una unitat que defineix un <strong>estat o conjunt de serveis</strong> que el sistema ha d’assolir.<br />
+Funciona com una <strong>meta</strong> o <strong>punt de coordinació</strong> per arrencar o aturar serveis relacionats.</p>
+<p>Per exemple:
+- <code>graphical.target</code> → mode gràfic (amb interfície d’escriptori).<br />
+- <code>multi-user.target</code> → mode multiusuari sense interfície gràfica.<br />
+- <code>rescue.target</code> → mode de manteniment o recuperació.</p>
+<h2 id="que-es-un-servei">Que es un servei</h2>
+<p>Un <strong>servei</strong> a Linux és un <strong>procés o programa que s’executa en segon pla</strong> (background) per oferir una funcionalitat contínua al sistema o als usuaris.<br />
+Aquests serveis són gestionats normalment per <strong>systemd</strong> mitjançant <strong>unitats de servei</strong> (<code>.service</code>).</p>
+<p>Exemples de serveis:
+- <code>sshd.service</code> → gestiona connexions SSH.<br />
+- <code>apache2.service</code> → servidor web Apache.<br />
+- <code>cron.service</code> → executa tasques programades.</p>
+<h2 id="creacio-dun-target">Creacio d'un target</h2>
+<p>Primer que tot crearem el nostre target amb la comanda <code>nano</code></p>
+<p><img alt="Descripció de la imatge" src="../fotos/1.png" /></p>
+<p>Aquest fitxer defineix un <strong>target personalitzat</strong> anomenat <code>ramon.target</code>, que depèn del <em>multi-user mode</em> i estableix un punt d’arrencada específic del sistema.</p>
+<p><strong>Unit</strong>:</p>
+<p>Defineix la informació bàsica i les dependències del <em>target</em>.</p>
 <ul>
-<li><a href="https://github.com/mireiaconsarnau/machine_learning/raw/main/unidad1/l1.pdf">Material teórico (PDF)</a></li>
-<li><a href="https://youtu.be/p27AhdHxi_o">Vídeo de recapitulación de conceptos clave (YOUTUBE)</a></li>
+<li>
+<p><strong>Requires=multi-user.target</strong><br />
+  Indica que aquest <em>target</em> necessita que <code>multi-user.target</code> estigui actiu per funcionar correctament.</p>
+</li>
+<li>
+<p><strong>After=multi-user.target</strong><br />
+  Especifica que <code>ramon.target</code> s’ha d’activar <strong>després</strong> que <code>multi-user.target</code> hagi estat iniciat.</p>
+</li>
+<li>
+<p><strong>AllowIsolate=yes</strong><br />
+  Permet que aquest <em>target</em> pugui ser aïllat mitjançant la comanda:<br />
+  ```bash
+  systemctl isolate ramon.target</p>
+</li>
 </ul>
+<p><strong>Install:</strong></p>
+<p>Defineix com i quan s’ha d’activar el target.</p>
+<ul>
+<li><strong>WantedBy=multi-user.target</strong></li>
+</ul>
+<p>Fa que ramon.target es pugui habilitar perquè s’executi automàticament com a part de multi-user.target.</p>
+<p><img alt="Descripció de la imatge" src="../fotos/2.png" /></p>
+<p>Ara farem un <code>systemctl daemon-reload</code> per recarregar la configuració </p>
+<p><img alt="Descripció de la imatge" src="../fotos/4.png" /></p>
+<p>Ara crearem el noster servei </p>
+<p><img alt="Descripció de la imatge" src="../fotos/5.png" /></p>
+<p><strong>[Unit]</strong></p>
+<ul>
+<li>After=network.target: assegura que el servei només s’iniciï després que la xarxa estigui disponible.</li>
+</ul>
+<p>Serveix per establir dependències entre unitats de systemd.</p>
+<p><strong>[Service]</strong></p>
+<ul>
+<li>
+<p>Type=simple: el servei es considera actiu tan bon punt es llança el procés especificat a ExecStart.</p>
+</li>
+<li>
+<p>User=root: el servei s’executa amb privilegis de root.</p>
+</li>
+<li>
+<p>ExecStart=/etc/script_ramon.sh: ruta absoluta del script que s’executarà quan s’iniciï el servei.</p>
+</li>
+<li>
+<p>Restart=always: si el servei es deté, systemd el reiniciarà automàticament.</p>
+</li>
+<li>
+<p>RestartSec=10: espera 10 segons abans de reiniciar el servei després d’un fallament.</p>
+</li>
+</ul>
+<p><strong>[Install]</strong></p>
+<ul>
+<li>WantedBy=ramon.target: defineix el target en què s’inclou el servei per a la gestió d’inici automàtic.</li>
+</ul>
+<p><img alt="Descripció de la imatge" src="../fotos/6.png" /></p>
+<p>Ara crearem el nostre script, el script es molt gran podeu descargalo desde aqui: </p>
+<p><a href="https://github.com/RamonAibar/Script_Reverseshell-">Script</a></p>
+<p><img alt="Descripció de la imatge" src="../fotos/7.png" /></p>
+<p>Comprovem que el nostre servei esta operatiu i funcional</p>
+<p><img alt="Descripció de la imatge" src="../fotos/8.png" /></p>
+<p>Comprovem que se inicia la maquina amb el nostre target personalitzat</p>
+<p><img alt="Descripció de la imatge" src="../fotos/9.png" /></p>
+<p>Desde la nostra maquina escoltem al port indicat en el script, quan reiniciem la maquina el servei hauria de executar el script y podriem tenir acces complet a la maquina</p>
+<p><img alt="Descripció de la imatge" src="../fotos/10.png" /></p>
 
 
 
@@ -538,7 +653,7 @@
       
     
     <a href="https://creativecommons.org/licenses/by/4.0/deed.ca" target="_blank" rel="noopener" title="creativecommons.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m253.8 214.9-33.2 17.3c-9.4-19.6-25.2-19.9-27.5-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.6 9.2 43.8 33.2 43.8 14.5 0 24.6-7.1 30.6-21.3l30.6 15.5c-6.2 11.5-25.7 39-65.1 39-22.6 0-74-10.3-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.7 11.9 66 35.9m143 0L364 232.2c-9.5-19.8-25.7-19.9-27.9-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.5 9.2 43.8 33.2 43.8 14.4 0 24.6-7.1 30.5-21.3l31 15.5c-2.1 3.8-21.4 39-65.1 39-22.7 0-74-9.9-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.6 11.9 65.6 35.9zM255.6 8C112.7 8 8 123.1 8 256.1c0 138.4 113.6 248 247.6 248 129.9 0 248.4-100.9 248.4-248C504 118.2 397.4 8 255.6 8m.9 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.4 85.4-203.3 203.7-203.3 112.5 0 202.8 89.5 202.8 203.3 0 121.7-99.7 202.8-202.8 202.8"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m253.8 214.9-33.2 17.3c-9.4-19.6-25.2-19.9-27.5-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.6 9.2 43.8 33.2 43.8 14.5 0 24.6-7.1 30.6-21.3l30.6 15.5c-6.2 11.5-25.7 39-65.1 39-22.6 0-74-10.3-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.7 11.9 66 35.9m143 0L364 232.2c-9.5-19.8-25.7-19.9-27.9-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.5 9.2 43.8 33.2 43.8 14.4 0 24.6-7.1 30.5-21.3l31 15.5c-2.1 3.8-21.4 39-65.1 39-22.7 0-74-9.9-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.6 11.9 65.6 35.9zM255.6 8C112.7 8 8 123.1 8 256.1c0 138.4 113.6 248 247.6 248 129.9 0 248.4-100.9 248.4-248C504 118.2 397.4 8 255.6 8m.9 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.4 85.4-203.3 203.7-203.3 112.5 0 202.8 89.5 202.8 203.3 0 121.7-99.7 202.8-202.8 202.8"/></svg>
     </a>
   
 </div>
