@@ -8,10 +8,8 @@
       
       
       
-        <link rel="canonical" href="https://ramonaibar.github.io/Mkdocs2ASIX/unidad2/">
+        <link rel="canonical" href="https://ramonaibar.github.io/Mkdocs2ASIX/unidad3/">
       
-      
-        <link rel="prev" href="../unidad1/">
       
       
       
@@ -23,7 +21,7 @@
     
     
       
-        <title>Configuració d'un Servei amb NSSM - ASIX2 Administració de Sistemes</title>
+        <title>Instal·lació i Configuració del Kernel Linux - ASIX2 Administració de Sistemes</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracio-dun-servei-amb-nssm" class="md-skip">
+        <a href="#installacio-i-configuracio-del-kernel-linux" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuració d'un Servei amb NSSM
+              Instal·lació i Configuració del Kernel Linux
             
           </span>
         </div>
@@ -339,20 +337,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -373,7 +369,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -416,37 +412,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuració d'un Servei amb NSSM
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
         
   
   
@@ -462,176 +431,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-nssm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Què és NSSM?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Què és NSSM?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#caracteristiques-clau" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Característiques clau:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pas-1-installar-el-servei-amb-nssm-mode-grafic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pas 1: Instal·lar el Servei amb NSSM (Mode Gràfic)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Pas 1: Instal·lar el Servei amb NSSM (Mode Gràfic)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-iniciar-la-interficie-grafica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Iniciar la Interfície Gràfica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-pestana-application-aplicacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Pestaña "Application" (Aplicació)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-pestana-details-detalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Pestaña "Details" (Detalls)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-installar-i-confirmacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Instal·lar i Confirmació
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprovacions-de-la-configuracio-linia-dordres" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprovacions de la Configuració (Línia d'Ordres)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Comprovacions de la Configuració (Línia d&#39;Ordres)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-comprovar-lexecutable-principal-application-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Comprovar l'Executable Principal (Application Path)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-comprovar-els-parametresarguments-de-laplicacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2. Comprovar els Paràmetres/Arguments de l'Aplicació
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-comprovar-el-directori-de-treball-startup-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Comprovar el Directori de Treball (Startup Directory)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprovacio-final-i-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprovacio final i scripts
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -671,22 +470,165 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-nssm" class="md-nav__link">
+  <a href="#introduccio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Què és NSSM?
+        Introducció
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Què és NSSM?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-configuracio-amb-menuconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Configuració amb menuconfig
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Configuració amb menuconfig">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caracteristiques-clau" class="md-nav__link">
+  <a href="#11-descomprimir-el-fitxer-del-kernel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Característiques clau:
+        1.1. Descomprimir el fitxer del kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-opcions-de-configuracio-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Opcions de Configuració General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-seleccio-de-networking-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Selecció de Networking Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-configuracio-guardada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Configuració Guardada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-inici-de-la-compilacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Inici de la Compilació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-installacio-dels-moduls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Instal·lació dels Mòduls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-creacio-del-paquet-del-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Creació del paquet del kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-comprovacio-de-que-el-paquet-sha-creat-correctament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Comprovacio de que el paquet s'ha creat correctament
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-installacio-del-paquet-del-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Instal·lacio del paquet del kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-configuracio-del-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Configuracio del grub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-update-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Update GRUB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-arrencada-del-sistema-amb-el-nou-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Arrencada del sistema amb el nou kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-comprovacio-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Comprovacio final
       
     </span>
   </a>
@@ -699,22 +641,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pas-1-installar-el-servei-amb-nssm-mode-grafic" class="md-nav__link">
+  <a href="#part-2-configuracio-amb-oldconfig" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pas 1: Instal·lar el Servei amb NSSM (Mode Gràfic)
+        Part 2: Configuracio amb oldconfig
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pas 1: Instal·lar el Servei amb NSSM (Mode Gràfic)">
+    <nav class="md-nav" aria-label="Part 2: Configuracio amb oldconfig">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-iniciar-la-interficie-grafica" class="md-nav__link">
+  <a href="#21-paquets-al-source-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Iniciar la Interfície Gràfica
+        2.1. Paquets al source-list
       
     </span>
   </a>
@@ -722,10 +664,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-pestana-application-aplicacio" class="md-nav__link">
+  <a href="#22-copia-del-fitxer-mainc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Pestaña "Application" (Aplicació)
+        2.2. Copia del fitxer main.c
       
     </span>
   </a>
@@ -733,10 +675,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-pestana-details-detalls" class="md-nav__link">
+  <a href="#23-comprovacio-de-que-el-fitxer-sha-copiat-correctament" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. Pestaña "Details" (Detalls)
+        2.3. Comprovacio de que el fitxer s'ha copiat correctament
       
     </span>
   </a>
@@ -744,10 +686,153 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-installar-i-confirmacio" class="md-nav__link">
+  <a href="#24-modificacio-del-fitxer-mainc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.4. Instal·lar i Confirmació
+        2.4. Modificacio del fitxer main.c
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-comprovacio-de-que-el-fitxer-sha-modificat-correctament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Comprovacio de que el fitxer s'ha modificat correctament
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-copia-de-la-configuracio-del-kernel-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Còpia de la configuració del kernel actual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-execucio-de-make-oldconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Execució de make oldconfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-proces-doldconfig-en-curs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Procés d'oldconfig en curs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-compilacio-del-kernel-modificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9. Compilació del kernel modificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-proces-de-compilacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10. Procés de compilació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-continuacio-de-la-compilacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11. Continuació de la compilació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-creacio-del-paquet-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12. Creació del paquet Debian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-verificacio-dels-paquets-creats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13. Verificació dels paquets creats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-installacio-dels-paquets-del-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.14. Instal·lació dels paquets del kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-actualitzacio-del-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.15. Actualització del GRUB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-reinici-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.16. Reinici del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-verificacio-del-missatge-personalitzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.17. Verificació del missatge personalitzat
       
     </span>
   </a>
@@ -756,67 +841,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprovacions-de-la-configuracio-linia-dordres" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprovacions de la Configuració (Línia d'Ordres)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Comprovacions de la Configuració (Línia d&#39;Ordres)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-comprovar-lexecutable-principal-application-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Comprovar l'Executable Principal (Application Path)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-comprovar-els-parametresarguments-de-laplicacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2. Comprovar els Paràmetres/Arguments de l'Aplicació
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-comprovar-el-directori-de-treball-startup-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Comprovar el Directori de Treball (Startup Directory)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprovacio-final-i-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprovacio final i scripts
-      
-    </span>
-  </a>
   
 </li>
       
@@ -837,98 +861,126 @@
 
 
 
-<h1 id="configuracio-dun-servei-amb-nssm">Configuració d'un Servei amb NSSM</h1>
-<h2 id="que-es-nssm">Què és NSSM?</h2>
-<p><strong>NSSM</strong> (<strong>Non-Sucking Service Manager</strong>) és un gestor de serveis de codi obert per a Windows. El seu propòsit principal és permetre que qualsevol aplicació o script s'executi de manera fiable com un <strong>servei de Windows</strong>.</p>
-<h3 id="caracteristiques-clau">Característiques clau:</h3>
-<ul>
-<li><strong>Fiabilitat:</strong> Pot reiniciar automàticament l'aplicació si falla o s'atura inesperadament.</li>
-<li><strong>Flexibilitat:</strong> Permet configurar paràmetres detallats del servei (entorn, dependències, retards de reinici, etc.).</li>
-<li><strong>Simplicitat:</strong> Facilita la instal·lació i desinstal·lació de serveis mitjançant la línia d'ordres o una interfície gràfica (GUI).</li>
-</ul>
+<h1 id="installacio-i-configuracio-del-kernel-linux">Instal·lació i Configuració del Kernel Linux</h1>
+<h2 id="introduccio">Introducció</h2>
+<p>Aquest document descriu el procés complet d'instal·lació i configuració d'un kernel Linux personalitzat, incloent la configuració amb <strong>menuconfig</strong> i <strong>oldconfig</strong>. S'ha modificat la configuració de xarxa (IP/TCP) i s'ha afegit un missatge personalitzat que apareix durant l'arrencada del sistema.</p>
 <hr />
-<h2 id="pas-1-installar-el-servei-amb-nssm-mode-grafic">Pas 1: Instal·lar el Servei amb NSSM (Mode Gràfic)</h2>
-<p>Aquesta secció documenta el procés utilitzant la interfície gràfica de NSSM per al servei anomenat <strong>ramon</strong>, el qual executa un script de PowerShell.</p>
-<h3 id="11-iniciar-la-interficie-grafica">1.1. Iniciar la Interfície Gràfica</h3>
-<p>Executeu NSSM des del directori on es troba l'executable per obrir el quadre de diàleg d'instal·lació:</p>
-<pre><code class="language-bash">nssm install
+<h2 id="part-1-configuracio-amb-menuconfig">Part 1: Configuració amb menuconfig</h2>
+<h3 id="11-descomprimir-el-fitxer-del-kernel">1.1. Descomprimir el fitxer del kernel</h3>
+<p>Aqui tenim el fitxer del kernel descomprimit.</p>
+<p><img alt="Menú principal menuconfig" src="../fotos/17.png" /></p>
+<h3 id="12-opcions-de-configuracio-general">1.2. Opcions de Configuració General</h3>
+<p>Interfície principal de <code>make menuconfig</code> mostrant les categories de configuració del kernel.</p>
+<p>Visualització de les opcions generals de configuració del kernel.</p>
+<p><img alt="Opcions generals" src="../fotos/18.png" /></p>
+<h3 id="13-seleccio-de-networking-support">1.3. Selecció de Networking Support</h3>
+<p>Accés a la categoria <strong>Networking support</strong> per configurar les opcions de xarxa.</p>
+<p>Dins de Networking support, visualització de les opcions disponibles.</p>
+<p>Selecció de <strong>Networking options</strong> per configurar protocols de xarxa.</p>
+<p><img alt="Networking support" src="../fotos/19.png" /></p>
+<h3 id="14-configuracio-guardada">1.4. Configuració Guardada</h3>
+<p>Confirmació que la configuració s'ha escrit correctament al fitxer <code>.config</code></p>
+<p><img alt="Networking options" src="../fotos/21.png" /></p>
+<h3 id="15-inici-de-la-compilacio">1.5. Inici de la Compilació</h3>
+<p>Execució de la comanda <code>make</code> per compilar el kernel.</p>
+<pre><code class="language-bash">sudo make -j$(nproc)
 </code></pre>
-<h3 id="12-pestana-application-aplicacio">1.2. Pestaña "Application" (Aplicació)</h3>
-<p>Aquí definim l'executable de PowerShell i els arguments necessaris per executar el nostre script.</p>
-<ul>
-<li>
-<p><strong>Path (Ruta):</strong> La ruta completa a l'executable de PowerShell.</p>
-<ul>
-<li><code>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Startup directory (Directori d'inici):</strong> El directori on es troba el vostre script.</p>
-<ul>
-<li><code>C:\Scripts\</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Arguments:</strong> Els arguments per executar el script de manera no interactiva.</p>
-<ul>
-<li><code>-ExecutionPolicy Bypass -NoProfile -NonInteractive -File "C:\Scripts\ramon.ps1"</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Service name (Nom del Servei):</strong> El nom curt del servei.</p>
-<ul>
-<li><code>ramon</code></li>
-</ul>
-</li>
-</ul>
-<p><img alt="Descripció de la imatge" src="../fotos/11.png" /></p>
-<h3 id="13-pestana-details-detalls">1.3. Pestaña "Details" (Detalls)</h3>
-<p>Configurem el tipus d'inici del servei.</p>
-<ul>
-<li><strong>Startup type (Tipus d'inici):</strong> Seleccioneu <strong>Automatic</strong> per assegurar que el servei s'iniciï automàticament amb el sistema.</li>
-</ul>
-<p><img alt="Descripció de la imatge" src="../fotos/12.png" /></p>
-<h3 id="14-installar-i-confirmacio">1.4. Instal·lar i Confirmació</h3>
-<p>Feu clic a <strong>Install service</strong> per completar el procés. El sistema confirmarà la instal·lació.</p>
-<p><img alt="Descripció de la imatge" src="../fotos/13.png" /></p>
-<h2 id="comprovacions-de-la-configuracio-linia-dordres">Comprovacions de la Configuració (Línia d'Ordres)</h2>
-<p>Un cop el servei està instal·lat, podem verificar la configuració que ha guardat NSSM utilitzant la línia d'ordres.</p>
-<h3 id="21-comprovar-lexecutable-principal-application-path">2.1. Comprovar l'Executable Principal (Application Path)</h3>
-<p>Verifica la ruta de l'executable que es llançarà:</p>
-<pre><code class="language-bash">C:\Tools&gt;.\nssm.exe get ramon Application
+<p>El procés de compilació està en curs, compilant els diferents components del kernel.</p>
+<p><img alt="Configuration written to .config" src="../fotos/22.png" /></p>
+<h3 id="16-installacio-dels-moduls">1.6. Instal·lació dels Mòduls</h3>
+<p>Instal·lació dels mòduls del kernel amb <code>sudo make modules_install</code>.</p>
+<pre><code class="language-bash">sudo make modules_install
 </code></pre>
-<p><strong>Sortida esperada:</strong></p>
-<pre><code class="language-bash">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+<p><img alt="Inici compilació" src="../fotos/23.png" /></p>
+<h3 id="17-creacio-del-paquet-del-kernel">1.7. Creació del paquet del kernel</h3>
+<p>Aqui executarem la comanda <code>sudo make bindeb-pkg</code> per crear el paquet del kernel.</p>
+<p><img alt="Creacio del paquet del kernel" src="../fotos/24.png" /></p>
+<h3 id="18-comprovacio-de-que-el-paquet-sha-creat-correctament">1.8. Comprovacio de que el paquet s'ha creat correctament</h3>
+<p>Amb un simple <code>ls</code> podem comprovar que el paquet s'ha creat correctament.</p>
+<p><img alt="Comprovacio de que el paquet s'ha creat correctament" src="../fotos/25.png" /></p>
+<h3 id="19-installacio-del-paquet-del-kernel">1.9. Instal·lacio del paquet del kernel</h3>
+<p>Per instal·lar el paquet del kernel, executarem la comanda <code>sudo dpkg -i linux-image-*.deb</code>i <code>sudo dpkg -i linux-headers-*.deb</code>.</p>
+<p><img alt="Instal·lacio del paquet del kernel" src="../fotos/26.png" /></p>
+<p><img alt="Instal·lacio del paquet del kernel" src="../fotos/27.png" /></p>
+<h3 id="110-configuracio-del-grub">1.10. Configuracio del grub</h3>
+<p>Configurarem estes opcions per tener el menu al arrancar per elegir el kernel que vols utilitzar.</p>
+<p><img alt="Configuracio del grub" src="../fotos/28.png" /></p>
+<h3 id="111-update-grub">1.11. Update GRUB</h3>
+<p>Executarem la comanda <code>sudo update-grub</code> per actualitzar el GRUB.</p>
+<p><img alt="Update GRUB" src="../fotos/29.png" /></p>
+<h3 id="112-arrencada-del-sistema-amb-el-nou-kernel">1.12. Arrencada del sistema amb el nou kernel</h3>
+<p>Arrencarem el sistema amb el nou kernel.</p>
+<p><img alt="Arrencada del sistema amb el nou kernel" src="../fotos/30.png" /></p>
+<h3 id="113-comprovacio-final">1.13. Comprovacio final</h3>
+<p>Com podem veure no tenim acces a la part de xarxa que habiem desactivat en el menuconfig.</p>
+<p><img alt="Comprovacio final" src="../fotos/31.png" /></p>
+<h2 id="part-2-configuracio-amb-oldconfig">Part 2: Configuracio amb oldconfig</h2>
+<h3 id="21-paquets-al-source-list">2.1. Paquets al source-list</h3>
+<p>Afegirem els paquets necessaris per a la configuracio amb oldconfig.</p>
+<p><img alt="Paquets al source" src="../fotos/32.png" /></p>
+<h3 id="22-copia-del-fitxer-mainc">2.2. Copia del fitxer main.c</h3>
+<p>Copiem el fitxer main.c per a poder-lo modificar sense perdre el fitxer original.</p>
+<p><img alt="Copia del fitxer main.c" src="../fotos/33.png" /></p>
+<h3 id="23-comprovacio-de-que-el-fitxer-sha-copiat-correctament">2.3. Comprovacio de que el fitxer s'ha copiat correctament</h3>
+<p>Amb un simple <code>ls</code> podem comprovar que el fitxer s'ha copiat correctament.</p>
+<p><img alt="Comprovacio de que el fitxer s'ha copiat correctament" src="../fotos/34.png" /></p>
+<h3 id="24-modificacio-del-fitxer-mainc">2.4. Modificacio del fitxer main.c</h3>
+<p>Modifiquem el fitxer main.c per a afegir el missatge personalitzat.</p>
+<p><img alt="Modificacio del fitxer main.c" src="../fotos/35.png" /></p>
+<h3 id="25-comprovacio-de-que-el-fitxer-sha-modificat-correctament">2.5. Comprovacio de que el fitxer s'ha modificat correctament</h3>
+<p>Amb un simple <code>grep</code> podem comprovar que el fitxer s'ha modificat correctament.</p>
+<p><img alt="Comprovacio de que el fitxer s'ha modificat correctament" src="../fotos/36.png" /></p>
+<h3 id="26-copia-de-la-configuracio-del-kernel-actual">2.6. Còpia de la configuració del kernel actual</h3>
+<p>Copiem la configuració del kernel actual del sistema al fitxer <code>.config</code> per utilitzar-la com a base:</p>
+<pre><code class="language-bash">sudo cp /boot/config-6.14.0-36-generic .config
 </code></pre>
-<h3 id="22-comprovar-els-parametresarguments-de-laplicacio">2.2. Comprovar els Paràmetres/Arguments de l'Aplicació</h3>
-<p>Verifica els arguments passats a l'executable de PowerShell:</p>
-<pre><code class="language-bash">C:\Tools&gt;.\nssm.exe get ramon AppParameters
+<p><img alt="Còpia de la configuració" src="../fotos/37.png" /></p>
+<h3 id="27-execucio-de-make-oldconfig">2.7. Execució de make oldconfig</h3>
+<p>Executem <code>make oldconfig</code> per aplicar la configuració anterior al codi font modificat:</p>
+<pre><code class="language-bash">make oldconfig
 </code></pre>
-<p><strong>Sortida esperada:</strong></p>
-<pre><code class="language-bash">-ExecutionPolicy Bypass -NoProfile -NonInteractive -File &quot;C:\Scripts\ramon.ps1&quot;
+<p><img alt="Execució de make oldconfig" src="../fotos/38.png" /></p>
+<h3 id="28-proces-doldconfig-en-curs">2.8. Procés d'oldconfig en curs</h3>
+<p>El procés d'oldconfig està aplicant la configuració i preguntant per noves opcions si n'hi ha.</p>
+<p><img alt="Procés oldconfig" src="../fotos/39.png" /></p>
+<h3 id="29-compilacio-del-kernel-modificat">2.9. Compilació del kernel modificat</h3>
+<p>Iniciem la compilació del kernel amb el missatge personalitzat afegit:</p>
+<pre><code class="language-bash">sudo make -j$(nproc)
 </code></pre>
-<h3 id="23-comprovar-el-directori-de-treball-startup-directory">2.3. Comprovar el Directori de Treball (Startup Directory)</h3>
-<p>Verifica el directori des d'on s'executarà el servei:</p>
-<pre><code class="language-bash">C:\Tools&gt;.\nssm.exe get ramon AppDirectory
+<p><img alt="Inici compilació modificat" src="../fotos/40.png" /></p>
+<h3 id="210-proces-de-compilacio">2.10. Procés de compilació</h3>
+<p>El procés de compilació està en curs, compilant el kernel amb les modificacions.</p>
+<p><img alt="Compilació en curs" src="../fotos/41.png" /></p>
+<h3 id="211-continuacio-de-la-compilacio">2.11. Continuació de la compilació</h3>
+<p>Continuació del procés de compilació del kernel modificat.</p>
+<p><img alt="Continuació compilació" src="../fotos/42.png" /></p>
+<h3 id="212-creacio-del-paquet-debian">2.12. Creació del paquet Debian</h3>
+<p>Creació del paquet <code>.deb</code> del kernel compilat amb <code>make bindeb-pkg</code>:</p>
+<pre><code class="language-bash">sudo make bindeb-pkg
 </code></pre>
-<p><strong>Sortida esperada:</strong></p>
-<pre><code class="language-bash">C:\Scripts\
+<p><img alt="Creació paquet deb" src="../fotos/43.png" /></p>
+<h3 id="213-verificacio-dels-paquets-creats">2.13. Verificació dels paquets creats</h3>
+<p>Comprovem amb <code>ls</code> que els paquets <code>.deb</code> s'han creat correctament.</p>
+<p><img alt="Verificació paquets" src="../fotos/44.png" /></p>
+<h3 id="214-installacio-dels-paquets-del-kernel">2.14. Instal·lació dels paquets del kernel</h3>
+<p>Instal·lem els paquets del kernel i els headers:</p>
+<pre><code class="language-bash">sudo dpkg -i linux-image-*.deb
+sudo dpkg -i linux-headers-*.deb
 </code></pre>
-<p><img alt="Descripció de la imatge" src="../fotos/14.png" /></p>
-<h2 id="comprovacio-final-i-scripts">Comprovacio final i scripts</h2>
-<ul>
-<li>
-<p>Script del windows el qual obrira una connexio per poder accedir de manera silenciosa es camufla fent-se passar per un proces normal del powersell sense saber la ubicacio del script, aixi mateix es indetectable.</p>
-</li>
-<li>
-<p>Script per a que el ubuntu es pugue conectar al windows per poder teir control total.</p>
-</li>
-</ul>
-<p><img alt="Descripció de la imatge" src="../fotos/16.png" /></p>
-<p>Per descarregar tots els fitxers del projecte, fes clic a l'enllaç següent:</p>
-<p><a href="https://github.com/RamonAibar/Script_Reverseshell-/archive/refs/heads/main.zip">Descarregar Repositori Complet (Fitxer ZIP)</a></p>
-<p>Comprovacio que funciona </p>
-<p><img alt="Descripció de la imatge" src="../fotos/15.png" /></p>
+<p><img alt="Instal·lació paquets" src="../fotos/45.png" /></p>
+<h3 id="215-actualitzacio-del-grub">2.15. Actualització del GRUB</h3>
+<p>Actualitzem el GRUB per incloure el nou kernel:</p>
+<pre><code class="language-bash">sudo update-grub
+</code></pre>
+<p><img alt="Actualització GRUB" src="../fotos/46.png" /></p>
+<h3 id="216-reinici-del-sistema">2.16. Reinici del sistema</h3>
+<p>Reiniciem el sistema per arrencar amb el nou kernel modificat:</p>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<p><img alt="Reinici sistema" src="../fotos/47.png" /></p>
+<h3 id="217-verificacio-del-missatge-personalitzat">2.17. Verificació del missatge personalitzat</h3>
+<p>Durant l'arrencada del sistema, podem veure el missatge personalitzat que hem afegit amb <code>printk()</code> al codi del kernel.</p>
+<p><img alt="Missatge personalitzat visible" src="../fotos/48.png" /></p>
 
 
 
