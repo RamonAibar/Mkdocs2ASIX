@@ -1,0 +1,38 @@
+
+site_name: ASIX2 Administració de Sistemes
+site_url: https://ramonaibar.github.io/Mkdocs2ASIX/
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: slate
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: default
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+copyright: Implantacio Sistemes Operatius © 2024 -2025 by Ramon Aibar is licensed under Creative Commons Attribution 4.0 International
+extra:
+  social:
+    - icon: fontawesome/brands/creative-commons
+      link: https://creativecommons.org/licenses/by/4.0/deed.ca
+  generator: false
+nav:
+  - Presentacio:
+      - index.md
+      - license.md
+  - Creacio de serveis i scripts personalitzats:
+      - unidad1.md
+      - unidad2.md
+  - Kernel Linux:
+      - unidad3.md
+  - Configuracio de VPN:
+      - unidad4.md
+  - Unio client Ubuntu a un domini Active Directory i certificat https:
+      - unidad5.md
