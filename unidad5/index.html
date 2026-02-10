@@ -1,0 +1,2244 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ramonaibar.github.io/Mkdocs2ASIX/unidad5/">
+      
+      
+        <link rel="prev" href="../unidad4/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Unitat 5: Integració d'Ubuntu en Active Directory i Configuració d'IIS amb Certificats SSL - ASIX2 Administració de Sistemes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unitat-5-integracio-dubuntu-en-active-directory-i-configuracio-diis-amb-certificats-ssl" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="ASIX2 Administració de Sistemes" class="md-header__button md-logo" aria-label="ASIX2 Administració de Sistemes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ASIX2 Administració de Sistemes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unitat 5: Integració d'Ubuntu en Active Directory i Configuració d'IIS amb Certificats SSL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ASIX2 Administració de Sistemes" class="md-nav__button md-logo" aria-label="ASIX2 Administració de Sistemes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ASIX2 Administració de Sistemes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Presentacio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creacio de serveis i scripts personalitzats
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Creacio de serveis i scripts personalitzats
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creacio d'un Target i Servei amb un script en linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuració d'un Servei amb NSSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kernel Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kernel Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instal·lació i Configuració del Kernel Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuracio de VPN
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuracio de VPN
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuració de VPN per Connexió a Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unio client Ubuntu a un domini Active Directory i certificat https
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unio client Ubuntu a un domini Active Directory i certificat https
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unitat 5: Integració d'Ubuntu en Active Directory i Configuració d'IIS amb Certificats SSL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unitat 5: Integració d'Ubuntu en Active Directory i Configuració d'IIS amb Certificats SSL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectius
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-preparacio-i-installacio-de-paquets-en-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Preparació i Instal·lació de Paquets en Ubuntu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Preparació i Instal·lació de Paquets en Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-actualitzacio-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Actualització del Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-installacio-de-paquets-necessaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Instal·lació de Paquets Necessaris
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-descobriment-i-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Descobriment i Unió al Domini
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Descobriment i Unió al Domini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-descobriment-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Descobriment del Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuracio-de-larxiu-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Configuració de l'Arxiu /etc/hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-configuracio-de-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Configuració de Samba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Unió al Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-configuracio-de-pam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Configuració de PAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-configuracio-de-sssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Configuració de SSSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-establir-permisos-correctes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Establir Permisos Correctes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-verificacio-de-la-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Verificació de la Unió al Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-configuracio-diis-en-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Configuració d'IIS en Windows Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Configuració d&#39;IIS en Windows Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-installacio-diis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Instal·lació d'IIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-creacio-de-pagina-web-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Creació de Pàgina Web Bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-verificacio-del-lloc-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Verificació del Lloc HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-configuracio-de-certificats-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Configuració de Certificats SSL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Configuració de Certificats SSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-installacio-dactive-directory-certificate-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Instal·lació d'Active Directory Certificate Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-seleccio-de-serveis-de-rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Selecció de Serveis de Rol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-tipus-dinstallacio-de-la-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Tipus d'Instal·lació de la CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-tipus-de-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Tipus de CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-configuracio-de-clau-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Configuració de Clau Privada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-configuracio-de-criptografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Configuració de Criptografia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-nom-de-la-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Nom de la CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-periode-de-validesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Període de Validesa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-base-de-dades-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Base de Dades de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-confirmacio-dinstallacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Confirmació d'Instal·lació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-sollicitud-i-configuracio-del-certificat-ssl-per-a-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5: Sol·licitud i Configuració del Certificat SSL per a IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Sol·licitud i Configuració del Certificat SSL per a IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-acces-a-la-consola-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Accés a la Consola de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-afegir-complement-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Afegir Complement de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-seleccio-de-compte-dequip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Selecció de Compte d'Equip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-seleccio-dequip-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Selecció d'Equip Local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-consola-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Consola de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-inici-de-lassistent-dinscripcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Inici de l'Assistent d'Inscripció
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-seleccio-del-tipus-de-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Selecció del Tipus de Certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-configuracio-del-subjecte-del-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Configuració del Subjecte del Certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-resultat-de-la-inscripcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Resultat de la Inscripció
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-configuracio-de-permisos-en-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Configuració de Permisos en IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 6: Configuració de Permisos en IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuracio-de-permisos-de-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Configuració de Permisos de Servidor Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-configuracio-de-permisos-per-a-entitats-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Configuració de Permisos per a Entitats de Seguretat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-configuracio-dhttps-en-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 7: Configuració d'HTTPS en IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7: Configuració d&#39;HTTPS en IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-acces-a-ladministrador-diis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Accés a l'Administrador d'IIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-modificar-enllac-del-lloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Modificar Enllaç del Lloc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-verificacio-del-lloc-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Verificació del Lloc HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectius
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-preparacio-i-installacio-de-paquets-en-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Preparació i Instal·lació de Paquets en Ubuntu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Preparació i Instal·lació de Paquets en Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-actualitzacio-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Actualització del Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-installacio-de-paquets-necessaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Instal·lació de Paquets Necessaris
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-descobriment-i-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Descobriment i Unió al Domini
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Descobriment i Unió al Domini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-descobriment-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Descobriment del Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuracio-de-larxiu-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Configuració de l'Arxiu /etc/hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-configuracio-de-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Configuració de Samba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Unió al Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-configuracio-de-pam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Configuració de PAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-configuracio-de-sssd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Configuració de SSSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-establir-permisos-correctes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Establir Permisos Correctes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-verificacio-de-la-unio-al-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Verificació de la Unió al Domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-configuracio-diis-en-windows-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Configuració d'IIS en Windows Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Configuració d&#39;IIS en Windows Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-installacio-diis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Instal·lació d'IIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-creacio-de-pagina-web-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Creació de Pàgina Web Bàsica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-verificacio-del-lloc-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Verificació del Lloc HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-configuracio-de-certificats-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Configuració de Certificats SSL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Configuració de Certificats SSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-installacio-dactive-directory-certificate-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Instal·lació d'Active Directory Certificate Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-seleccio-de-serveis-de-rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Selecció de Serveis de Rol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-tipus-dinstallacio-de-la-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Tipus d'Instal·lació de la CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-tipus-de-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Tipus de CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-configuracio-de-clau-privada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Configuració de Clau Privada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-configuracio-de-criptografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Configuració de Criptografia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-nom-de-la-ca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Nom de la CA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-periode-de-validesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Període de Validesa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-base-de-dades-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Base de Dades de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-confirmacio-dinstallacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Confirmació d'Instal·lació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-sollicitud-i-configuracio-del-certificat-ssl-per-a-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5: Sol·licitud i Configuració del Certificat SSL per a IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Sol·licitud i Configuració del Certificat SSL per a IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-acces-a-la-consola-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Accés a la Consola de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-afegir-complement-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Afegir Complement de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-seleccio-de-compte-dequip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Selecció de Compte d'Equip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-seleccio-dequip-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Selecció d'Equip Local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-consola-de-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Consola de Certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-inici-de-lassistent-dinscripcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Inici de l'Assistent d'Inscripció
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-seleccio-del-tipus-de-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Selecció del Tipus de Certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-configuracio-del-subjecte-del-certificat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Configuració del Subjecte del Certificat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-resultat-de-la-inscripcio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Resultat de la Inscripció
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-configuracio-de-permisos-en-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Configuració de Permisos en IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 6: Configuració de Permisos en IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-configuracio-de-permisos-de-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Configuració de Permisos de Servidor Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-configuracio-de-permisos-per-a-entitats-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Configuració de Permisos per a Entitats de Seguretat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-7-configuracio-dhttps-en-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 7: Configuració d'HTTPS en IIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 7: Configuració d&#39;HTTPS en IIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-acces-a-ladministrador-diis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Accés a l'Administrador d'IIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-modificar-enllac-del-lloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Modificar Enllaç del Lloc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-verificacio-del-lloc-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Verificació del Lloc HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unitat-5-integracio-dubuntu-en-active-directory-i-configuracio-diis-amb-certificats-ssl">Unitat 5: Integració d'Ubuntu en Active Directory i Configuració d'IIS amb Certificats SSL</h1>
+<h2 id="introduccio">Introducció</h2>
+<p>En aquesta pràctica es documenta el procés complet d'integració d'un sistema Ubuntu en un domini d'Active Directory de Windows Server, seguit de la instal·lació i configuració d'IIS (Internet Information Services) amb un lloc web bàsic i la implementació de certificats SSL per a connexions segures HTTPS.</p>
+<h2 id="objectius">Objectius</h2>
+<ul>
+<li>Unir un equip Ubuntu a un domini d'Active Directory</li>
+<li>Configurar l'autenticació d'usuaris del domini en Ubuntu</li>
+<li>Instal·lar i configurar IIS en Windows Server</li>
+<li>Crear un lloc web bàsic</li>
+<li>Configurar certificats SSL per a HTTPS</li>
+</ul>
+<hr />
+<h2 id="part-1-preparacio-i-installacio-de-paquets-en-ubuntu">Part 1: Preparació i Instal·lació de Paquets en Ubuntu</h2>
+<h3 id="11-actualitzacio-del-sistema">1.1 Actualització del Sistema</h3>
+<p>Abans de començar, és fonamental actualitzar el sistema Ubuntu:</p>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<h3 id="12-installacio-de-paquets-necessaris">1.2 Instal·lació de Paquets Necessaris</h3>
+<p>Per unir Ubuntu a un domini d'Active Directory, necessitem instal·lar diversos paquets que gestionen l'autenticació i la integració amb el domini:</p>
+<pre><code class="language-bash">sudo apt install realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+</code></pre>
+<p><strong>Descripció dels paquets:</strong></p>
+<ul>
+<li><strong>realmd</strong>: Eina per descobrir i unir-se a dominis</li>
+<li><strong>sssd</strong>: System Security Services Daemon, gestiona l'autenticació remota</li>
+<li><strong>sssd-tools</strong>: Eines addicionals per a SSSD</li>
+<li><strong>libnss-sss</strong>: Biblioteca NSS per a SSSD</li>
+<li><strong>libpam-sss</strong>: Mòdul PAM per a SSSD</li>
+<li><strong>adcli</strong>: Eina de línia de comandes per a Active Directory</li>
+<li><strong>samba-common-bin</strong>: Arxius comuns de Samba</li>
+<li><strong>oddjob</strong>: Sistema d'execució de tasques</li>
+<li><strong>oddjob-mkhomedir</strong>: Crea directoris home automàticament</li>
+<li><strong>packagekit</strong>: Framework de gestió de paquets</li>
+</ul>
+<p>Addicionalment, instal·lem paquets de Winbind per compatibilitat:</p>
+<pre><code class="language-bash">sudo apt install -y winbind libpam-winbind libnss-winbind samba-common-bin
+</code></pre>
+<hr />
+<h2 id="part-2-descobriment-i-unio-al-domini">Part 2: Descobriment i Unió al Domini</h2>
+<h3 id="21-descobriment-del-domini">2.1 Descobriment del Domini</h3>
+<p>Primer, verifiquem que el domini d'Active Directory és accessible des d'Ubuntu:</p>
+<pre><code class="language-bash">sudo realm discover xanax.local
+</code></pre>
+<p><img alt="Descobriment del domini" src="../fotos/63.png" /></p>
+<p>Com es pot observar en la captura, la comanda <code>realm discover</code> mostra informació del domini:</p>
+<ul>
+<li><strong>Tipus</strong>: Kerberos</li>
+<li><strong>Nom del realm</strong>: XANAX.LOCAL</li>
+<li><strong>Nom del domini</strong>: xanax.local</li>
+<li><strong>Software del servidor</strong>: active-directory</li>
+<li><strong>Software del client</strong>: sssd</li>
+<li><strong>Paquets requerits</strong>: sssd-tools, sssd, libnss-sss, libpam-sss, adcli, samba-common-bin</li>
+</ul>
+<h3 id="22-configuracio-de-larxiu-etchosts">2.2 Configuració de l'Arxiu /etc/hosts</h3>
+<p>És important configurar correctament l'arxiu <code>/etc/hosts</code> per a la resolució de noms:</p>
+<pre><code class="language-bash">sudo nano /etc/hosts
+</code></pre>
+<p><img alt="Configuració de /etc/hosts" src="../fotos/64.png" /></p>
+<p>Afegim les següents línies:</p>
+<pre><code>127.0.0.1 localhost
+192.168.1.20 perco.xanax.local perco
+192.168.1.10 WIN-PBIEN0BRO9V.xanax.local WIN-PBIEN0BRO9V
+</code></pre>
+<h3 id="23-configuracio-de-samba">2.3 Configuració de Samba</h3>
+<p>Editem l'arxiu de configuració de Samba:</p>
+<pre><code class="language-bash">sudo nano /etc/samba/smb.conf
+</code></pre>
+<p><img alt="Configuració de Samba" src="../fotos/65.png" /></p>
+<p>Configuració aplicada:</p>
+<pre><code class="language-ini">[global]
+workgroup = XANAX
+security = ads
+realm = XANAX.LOCAL
+
+# Evitar l'error &quot;Stream modified&quot;
+client signing = yes
+client use spnego = yes
+kerberos method = secrets and keytab
+
+# Configuració d'usuaris
+idmap config * : backend = tdb
+idmap config * : range = 3000-7999
+idmap config XANAX : backend = rid
+idmap config XANAX : range = 10000-999999
+template shell = /bin/bash
+winbind use default domain = true
+winbind offline logon = false
+</code></pre>
+<h3 id="24-unio-al-domini">2.4 Unió al Domini</h3>
+<p>Executem la comanda per unir l'equip al domini:</p>
+<pre><code class="language-bash">sudo net ads join -U Administrador
+</code></pre>
+<p><img alt="Unió al domini" src="../fotos/66.png" /></p>
+<p>El sistema sol·licita la contrasenya de l'usuari Administrador del domini i confirma:</p>
+<pre><code>Using short domain name -- XANAX
+Joined 'PERCO' to dns domain 'xanax.local'
+</code></pre>
+<h3 id="25-configuracio-de-pam">2.5 Configuració de PAM</h3>
+<p>Durant la configuració, se'ns presenta un menú per seleccionar els perfils PAM a habilitar:</p>
+<p><img alt="Configuració de PAM" src="../fotos/67.png" /></p>
+<p>Seleccionem les següents opcions:</p>
+<ul>
+<li>[x] Winbind NT/Active Directory authentication</li>
+<li>[x] Register user sessions in the systemd control group</li>
+<li>[x] Create home directory on login</li>
+</ul>
+<h3 id="26-configuracio-de-sssd">2.6 Configuració de SSSD</h3>
+<p>Editem l'arxiu de configuració de SSSD:</p>
+<pre><code class="language-bash">sudo nano /etc/sssd/sssd.conf
+</code></pre>
+<p><img alt="Configuració de SSSD" src="../fotos/68.png" /></p>
+<p>Contingut de l'arxiu:</p>
+<pre><code class="language-ini">[sssd]
+domains = xanax.local
+config_file_version = 2
+services = nss, pam
+
+[domain/xanax.local]
+default_shell = /bin/bash
+ad_server = WIN-PBIEN0BRO9V.xanax.local
+krb5_store_password_if_offline = true
+cache_credentials = true
+krb5_realm = XANAX.LOCAL
+realmd_tags = manages-system joined-with-adcli
+id_provider = ad
+fallback_homedir = /home/%u
+ad_domain = xanax.local
+use_fully_qualified_names = false
+ldap_id_mapping = true
+access_provider = ad
+ad_enable_dns_sites = false
+</code></pre>
+<h3 id="27-establir-permisos-correctes">2.7 Establir Permisos Correctes</h3>
+<p>És crucial establir els permisos correctes per a l'arxiu de configuració de SSSD:</p>
+<pre><code class="language-bash">sudo chmod 600 /etc/sssd/sssd.conf
+sudo chown root:root /etc/sssd/sssd.conf
+</code></pre>
+<p><img alt="Permisos de sssd.conf" src="../fotos/69.png" /></p>
+<h3 id="28-verificacio-de-la-unio-al-domini">2.8 Verificació de la Unió al Domini</h3>
+<p><img alt="Unió amb l'usuari Administrador" src="../fotos/70.png" /></p>
+<p>Podem verificar que l'equip s'ha unit correctament al domini des del servidor Windows:</p>
+<p><img alt="Verificació en Active Directory" src="../fotos/71.png" /></p>
+<p>A la consola d'"Usuaris i equips d'Active Directory" podem veure l'equip <strong>PERCO</strong> llistat en el domini xanax.local.</p>
+<hr />
+<h2 id="part-3-configuracio-diis-en-windows-server">Part 3: Configuració d'IIS en Windows Server</h2>
+<h3 id="31-installacio-diis">3.1 Instal·lació d'IIS</h3>
+<p>Des del servidor Windows, accedim a PowerShell com a Administrador i executem la comanda mostrada:</p>
+<p><img alt="PowerShell Administrador" src="../fotos/72.png" /></p>
+<h3 id="32-creacio-de-pagina-web-basica">3.2 Creació de Pàgina Web Bàsica</h3>
+<p>Creem un arxiu HTML bàsic per provar el servidor web:</p>
+<pre><code class="language-bash">type C:\inetpub\wwwroot\index.html
+</code></pre>
+<p><img alt="Contingut d'index.html" src="../fotos/73.png" /></p>
+<p>Contingut de l'arxiu:</p>
+<pre><code class="language-html">&lt;h1&gt;Hola des de Windows Server! - Prova HTTP&lt;/h1&gt;
+</code></pre>
+<h3 id="33-verificacio-del-lloc-http">3.3 Verificació del Lloc HTTP</h3>
+<p>Accedim al lloc web mitjançant HTTP per verificar que funciona correctament:</p>
+<p><img alt="Lloc web HTTP" src="../fotos/74.png" /></p>
+<p>El lloc és accessible a <code>http://win-pbien0bro9v.xanax.local</code> mostrant el missatge "Hola des de Windows Server! - Prova HTTP".</p>
+<hr />
+<h2 id="part-4-configuracio-de-certificats-ssl">Part 4: Configuració de Certificats SSL</h2>
+<h3 id="41-installacio-dactive-directory-certificate-services">4.1 Instal·lació d'Active Directory Certificate Services</h3>
+<p>Des de l'Administrador del servidor, afegim el rol de "Serveis de certificats d'Active Directory":</p>
+<p><img alt="Instal·lació d'AD CS" src="../fotos/75.png" /></p>
+<p>Seleccionem:
+- ✅ <strong>Serveis d'arxius i emmagatzematge iSCSI</strong>
+- ✅ <strong>Entitat de certificació</strong></p>
+<h3 id="42-seleccio-de-serveis-de-rol">4.2 Selecció de Serveis de Rol</h3>
+<p><img alt="Serveis de rol" src="../fotos/76.png" /></p>
+<p>Seleccionem:
+- ✅ <strong>Entitat de certificació</strong>
+- ✅ <strong>Inscripció web d'entitat de certificació</strong></p>
+<h3 id="43-tipus-dinstallacio-de-la-ca">4.3 Tipus d'Instal·lació de la CA</h3>
+<p><img alt="Tipus d'instal·lació" src="../fotos/77.png" /></p>
+<p>Seleccionem <strong>CA empresarial</strong> ja que estem integrats amb Active Directory.</p>
+<h3 id="44-tipus-de-ca">4.4 Tipus de CA</h3>
+<p><img alt="Tipus de CA" src="../fotos/78.png" /></p>
+<p>Seleccionem <strong>CA arrel</strong> per crear una nova jerarquia de certificats.</p>
+<h3 id="45-configuracio-de-clau-privada">4.5 Configuració de Clau Privada</h3>
+<p><img alt="Clau privada" src="../fotos/79.png" /></p>
+<p>Seleccionem <strong>Crear una clau privada nova</strong> per generar un nou parell de claus.</p>
+<h3 id="46-configuracio-de-criptografia">4.6 Configuració de Criptografia</h3>
+<p><img alt="Criptografia" src="../fotos/80.png" /></p>
+<p>Configurem les opcions criptogràfiques:
+- <strong>Proveïdor</strong>: RSA#Microsoft Software Key Storage Provider
+- <strong>Longitud de clau</strong>: 2048
+- <strong>Algoritme hash</strong>: SHA256</p>
+<h3 id="47-nom-de-la-ca">4.7 Nom de la CA</h3>
+<p><img alt="Nom de la CA" src="../fotos/81.png" /></p>
+<p>Configurem el nom de l'entitat de certificació:
+- <strong>Nom comú</strong>: xanax-WIN-PBIEN0BRO9V-CA
+- <strong>Sufix de nom distintiu</strong>: DC=xanax,DC=local
+- <strong>Vista prèvia del nom distintiu</strong>: CN=xanax-WIN-PBIEN0BRO9V-CA,DC=xanax,DC=local</p>
+<h3 id="48-periode-de-validesa">4.8 Període de Validesa</h3>
+<p><img alt="Període de validesa" src="../fotos/82.png" /></p>
+<p>Establim el període de validesa en <strong>5 anys</strong>.</p>
+<h3 id="49-base-de-dades-de-certificats">4.9 Base de Dades de Certificats</h3>
+<p><img alt="Base de dades" src="../fotos/83.png" /></p>
+<p>Configurem les ubicacions de les bases de dades:
+- <strong>Ubicació de la base de dades de certificats</strong>: C:\WINDOWS\system32\CertLog
+- <strong>Ubicació del registre de la base de dades</strong>: C:\WINDOWS\system32\CertLog</p>
+<h3 id="410-confirmacio-dinstallacio">4.10 Confirmació d'Instal·lació</h3>
+<p><img alt="Resultats d'instal·lació" src="../fotos/84.png" /></p>
+<p>La instal·lació es completa exitosament:
+- ✅ <strong>Entitat de certificació</strong>: Configuració realitzada correctament
+- ✅ <strong>Inscripció web d'entitat de certificació</strong>: Configuració realitzada correctament</p>
+<hr />
+<h2 id="part-5-sollicitud-i-configuracio-del-certificat-ssl-per-a-iis">Part 5: Sol·licitud i Configuració del Certificat SSL per a IIS</h2>
+<h3 id="51-acces-a-la-consola-de-certificats">5.1 Accés a la Consola de Certificats</h3>
+<p>Obrim la consola d'administració de certificats executant <code>mmc</code>:</p>
+<p><img alt="Executar mmc" src="../fotos/90.png" /></p>
+<h3 id="52-afegir-complement-de-certificats">5.2 Afegir Complement de Certificats</h3>
+<p><img alt="Afegir complement" src="../fotos/91.png" /></p>
+<p>Des del menú, seleccionem "Afegir o eliminar complements" i afegim el complement <strong>Certificats</strong>.</p>
+<h3 id="53-seleccio-de-compte-dequip">5.3 Selecció de Compte d'Equip</h3>
+<p><img alt="Compte d'equip" src="../fotos/92.png" /></p>
+<p>Seleccionem <strong>Compte d'equip</strong> per administrar certificats de l'equip local.</p>
+<h3 id="54-seleccio-dequip-local">5.4 Selecció d'Equip Local</h3>
+<p><img alt="Equip local" src="../fotos/93.png" /></p>
+<p>Confirmem que administrarem l'<strong>Equip local</strong>.</p>
+<h3 id="55-consola-de-certificats">5.5 Consola de Certificats</h3>
+<p><img alt="Consola de certificats" src="../fotos/86.png" /></p>
+<p>A la consola de certificats, naveguem a:
+<strong>Certificats (equip local) → Personal</strong></p>
+<p>Fem clic dret i seleccionem <strong>Totes les tasques → Sol·licitar un nou certificat</strong>.</p>
+<h3 id="56-inici-de-lassistent-dinscripcio">5.6 Inici de l'Assistent d'Inscripció</h3>
+<p><img alt="Assistent d'inscripció" src="../fotos/95.png" /></p>
+<p>L'assistent d'inscripció de certificats ens guia a través del procés.</p>
+<h3 id="57-seleccio-del-tipus-de-certificat">5.7 Selecció del Tipus de Certificat</h3>
+<p><img alt="Tipus de certificat" src="../fotos/96.png" /></p>
+<p>Seleccionem <strong>Servidor web</strong> i fem clic a "Es necessita més informació per inscriure aquest certificat".</p>
+<h3 id="58-configuracio-del-subjecte-del-certificat">5.8 Configuració del Subjecte del Certificat</h3>
+<p><img alt="Propietats del certificat" src="../fotos/97.png" /></p>
+<p>Configurem el subjecte del certificat:</p>
+<p><strong>Nom de subjecte:</strong>
+- Tipus: <strong>Nom comú</strong>
+- Valor: <code>CN=win-pbien0bro9v.xanax.local</code></p>
+<p><strong>Nom alternatiu:</strong>
+- Tipus: <strong>DNS</strong>
+- Valors:
+  - <code>win-pbien0bro9v.xanax.local</code>
+  - <code>192.168.1.10</code></p>
+<h3 id="59-resultat-de-la-inscripcio">5.9 Resultat de la Inscripció</h3>
+<p><img alt="Resultat d'inscripció" src="../fotos/98.png" /></p>
+<p>El certificat s'instal·la correctament:
+- ✅ <strong>Servidor web</strong>: ESTAT: Correcte</p>
+<hr />
+<h2 id="part-6-configuracio-de-permisos-en-iis">Part 6: Configuració de Permisos en IIS</h2>
+<h3 id="61-configuracio-de-permisos-de-servidor-web">6.1 Configuració de Permisos de Servidor Web</h3>
+<p><img alt="Permisos de servidor web" src="../fotos/89.png" /></p>
+<p>Des de les propietats del servidor web, configurem els permisos per als grups del domini:</p>
+<p><strong>Noms de grups o usuaris:</strong>
+- Usuaris autenticats
+- Admins. del domini (XANAX\Admins. del domini)
+- Administradors d'empreses (XANAX\Administradors d'empreses)
+- Equips del domini (XANAX\Equips del domini)</p>
+<p><strong>Permisos d'Equips del domini:</strong>
+- ☐ Control total
+- ☑ Llegir
+- ☑ Escriure
+- ☑ Inscriure's</p>
+<h3 id="62-configuracio-de-permisos-per-a-entitats-de-seguretat">6.2 Configuració de Permisos per a Entitats de Seguretat</h3>
+<p><img alt="Selecció d'entitats" src="../fotos/87.png" /></p>
+<p>Seleccionem el tipus d'objecte:
+- ✅ <strong>Entitats de seguretat integrades</strong>
+- ☐ Comptes de servei
+- ☐ Grups
+- ☐ Grups</p>
+<p>Des de la ubicació: <strong>xanax.local</strong></p>
+<p><img alt="Equips del domini" src="../fotos/88.png" /></p>
+<p>Escrivim "Equips del domini" per afegir aquest grup de seguretat.</p>
+<hr />
+<h2 id="part-7-configuracio-dhttps-en-iis">Part 7: Configuració d'HTTPS en IIS</h2>
+<h3 id="71-acces-a-ladministrador-diis">7.1 Accés a l'Administrador d'IIS</h3>
+<p><img alt="Administrador d'IIS" src="../fotos/99.png" /></p>
+<p>Obrim l'Administrador d'Internet Information Services (IIS).</p>
+<h3 id="72-modificar-enllac-del-lloc">7.2 Modificar Enllaç del Lloc</h3>
+<p>Seleccionem el lloc web i fem clic a "Modificar lloc" → "Enllaços":</p>
+<p><img alt="Modificar enllaç" src="../fotos/100.png" /></p>
+<p>Configurem l'enllaç HTTPS:
+- <strong>Tipus</strong>: https
+- <strong>Adreça IP</strong>: Totes les no assignades
+- <strong>Port</strong>: 443
+- <strong>Certificat SSL</strong>: win-pbien0bro9v.xanax.local</p>
+<h3 id="73-verificacio-del-lloc-https">7.3 Verificació del Lloc HTTPS</h3>
+<p><img alt="Lloc HTTPS funcionant" src="../fotos/101.png" /></p>
+<p>Accedim al lloc mitjançant HTTPS: <code>https://win-pbien0bro9v.xanax.local</code></p>
+<p>El lloc web ara és accessible de forma segura mostrant el missatge:
+<strong>"Hola des de Windows Server! -"</strong></p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Implantacio Sistemes Operatius © 2024 -2025 by Ramon Aibar is licensed under Creative Commons Attribution 4.0 International
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.ca" target="_blank" rel="noopener" title="creativecommons.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m253.8 214.9-33.2 17.3c-9.4-19.6-25.2-19.9-27.5-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.6 9.2 43.8 33.2 43.8 14.5 0 24.6-7.1 30.6-21.3l30.6 15.5c-6.2 11.5-25.7 39-65.1 39-22.6 0-74-10.3-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.7 11.9 66 35.9m143 0L364 232.2c-9.5-19.8-25.7-19.9-27.9-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.5 9.2 43.8 33.2 43.8 14.4 0 24.6-7.1 30.5-21.3l31 15.5c-2.1 3.8-21.4 39-65.1 39-22.7 0-74-9.9-74-77 0-58.7 43-77.1 72.6-77.1 30.7 0 52.6 11.9 65.6 35.9zM255.6 8C112.7 8 8 123.1 8 256.1c0 138.4 113.6 248 247.6 248 129.9 0 248.4-100.9 248.4-248C504 118.2 397.4 8 255.6 8m.9 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.4 85.4-203.3 203.7-203.3 112.5 0 202.8 89.5 202.8 203.3 0 121.7-99.7 202.8-202.8 202.8"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

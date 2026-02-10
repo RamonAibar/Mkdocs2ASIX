@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ramonaibar.github.io/Mkdocs2ASIX/unidad3/">
+        <link rel="canonical" href="https://ramonaibar.github.io/Mkdocs2ASIX/unidad4/">
       
       
-        <link rel="prev" href="../unidad2/">
+        <link rel="prev" href="../unidad3/">
       
       
-        <link rel="next" href="../unidad4/">
+        <link rel="next" href="../unidad5/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Instal·lació i Configuració del Kernel Linux - ASIX2 Administració de Sistemes</title>
+        <title>Configuració de VPN per Connexió a Active Directory - ASIX2 Administració de Sistemes</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installacio-i-configuracio-del-kernel-linux" class="md-skip">
+        <a href="#configuracio-de-vpn-per-connexio-a-active-directory" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instal·lació i Configuració del Kernel Linux
+              Configuració de VPN per Connexió a Active Directory
             
           </span>
         </div>
@@ -451,20 +451,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -485,12 +483,96 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
     Kernel Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instal·lació i Configuració del Kernel Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuracio de VPN
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuracio de VPN
   
 
           </label>
@@ -519,7 +601,7 @@
   <span class="md-ellipsis">
     
   
-    Instal·lació i Configuració del Kernel Linux
+    Configuració de VPN per Connexió a Active Directory
   
 
     
@@ -537,7 +619,7 @@
   <span class="md-ellipsis">
     
   
-    Instal·lació i Configuració del Kernel Linux
+    Configuració de VPN per Connexió a Active Directory
   
 
     
@@ -571,25 +653,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-1-configuracio-amb-menuconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 1: Configuració amb menuconfig
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part 1: Configuració amb menuconfig">
+    <nav class="md-nav" aria-label="Introducció">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-descomprimir-el-fitxer-del-kernel" class="md-nav__link">
+  <a href="#escenari" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Descomprimir el fitxer del kernel
+        Escenari
       
     </span>
   </a>
@@ -597,10 +668,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-opcions-de-configuracio-general" class="md-nav__link">
+  <a href="#arquitectura-de-la-xarxa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Opcions de Configuració General
+        Arquitectura de la Xarxa
       
     </span>
   </a>
@@ -608,120 +679,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-seleccio-de-networking-support" class="md-nav__link">
+  <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. Selecció de Networking Support
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-configuracio-guardada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Configuració Guardada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-inici-de-la-compilacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Inici de la Compilació
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-installacio-dels-moduls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6. Instal·lació dels Mòduls
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-creacio-del-paquet-del-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7. Creació del paquet del kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18-comprovacio-de-que-el-paquet-sha-creat-correctament" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8. Comprovacio de que el paquet s'ha creat correctament
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#19-installacio-del-paquet-del-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.9. Instal·lacio del paquet del kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#110-configuracio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.10. Configuracio del grub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#111-update-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.11. Update GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#112-arrencada-del-sistema-amb-el-nou-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.12. Arrencada del sistema amb el nou kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#113-comprovacio-final" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.13. Comprovacio final
+        Objectius
       
     </span>
   </a>
@@ -734,22 +695,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-2-configuracio-amb-oldconfig" class="md-nav__link">
+  <a href="#part-1-configuracio-del-servidor-vpn-windows-server-2019" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 2: Configuracio amb oldconfig
+        Part 1: Configuració del Servidor VPN (Windows Server 2019)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part 2: Configuracio amb oldconfig">
+    <nav class="md-nav" aria-label="Part 1: Configuració del Servidor VPN (Windows Server 2019)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-paquets-al-source-list" class="md-nav__link">
+  <a href="#11-requisits-previs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Paquets al source-list
+        1.1. Requisits Previs
       
     </span>
   </a>
@@ -757,10 +718,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-copia-del-fitxer-mainc" class="md-nav__link">
+  <a href="#12-installacio-del-rol-de-acces-remot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Copia del fitxer main.c
+        1.2. Instal·lació del Rol de Accés Remot
       
     </span>
   </a>
@@ -768,10 +729,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-comprovacio-de-que-el-fitxer-sha-copiat-correctament" class="md-nav__link">
+  <a href="#13-configuracio-de-les-interficies-de-xarxa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Comprovacio de que el fitxer s'ha copiat correctament
+        1.3. Configuració de les Interfícies de Xarxa
       
     </span>
   </a>
@@ -779,10 +740,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-modificacio-del-fitxer-mainc" class="md-nav__link">
+  <a href="#14-configuracio-del-servei-de-routing-i-acces-remot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Modificacio del fitxer main.c
+        1.4. Configuració del Servei de Routing i Accés Remot
       
     </span>
   </a>
@@ -790,10 +751,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-comprovacio-de-que-el-fitxer-sha-modificat-correctament" class="md-nav__link">
+  <a href="#15-configuracio-del-pool-dadreces-vpn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Comprovacio de que el fitxer s'ha modificat correctament
+        1.5. Configuració del Pool d'Adreces VPN
       
     </span>
   </a>
@@ -801,120 +762,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-copia-de-la-configuracio-del-kernel-actual" class="md-nav__link">
+  <a href="#16-configuracio-de-nat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Còpia de la configuració del kernel actual
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-execucio-de-make-oldconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.7. Execució de make oldconfig
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#28-edicio-de-la-configuracio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.8. Edicio de la configuracio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#29-compilacio-del-kernel-modificat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.9. Compilació del kernel modificat
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#210-instalacio-dels-moduls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.10. Instalacio dels moduls
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#211-creacio-del-paquet-debian" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.11. Creació del paquet Debian
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#212-installacio-dels-paquets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.12. Instal·lacio dels paquets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#213-modificacio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.13. Modificacio del GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#214-actualitzacio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.14. Actualització del GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#216-reinici-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.16. Reinici del sistema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#217-verificacio-del-missatge-personalitzat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.17. Verificació del missatge personalitzat
+        1.6. Configuració de NAT
       
     </span>
   </a>
@@ -927,10 +778,182 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusio-final" class="md-nav__link">
+  <a href="#part-2-configuracio-del-client-vpn-windows-10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusio Final
+        Part 2: Configuració del Client VPN (Windows 10)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Configuració del Client VPN (Windows 10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-crear-una-nova-connexio-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Crear una Nova Connexió VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configurar-credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Configurar Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-connectar-se-a-la-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Connectar-se a la VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-verificacio-de-la-connexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Verificació de la Connexió
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Verificació de la Connexió">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-comprovar-la-connexio-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Comprovar la Connexió VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-comprovar-connectivitat-amb-la-xarxa-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Comprovar Connectivitat amb la Xarxa Interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-comprovar-acces-a-lactive-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Comprovar Accés a l'Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-unir-se-al-domini-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Unir-se al Domini (Opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucio-de-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolució de Problemes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolució de Problemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-client-no-es-pot-connectar-a-la-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El client no es pot connectar a la VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-client-es-connecta-pero-no-pot-accedir-a-la-xarxa-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El client es connecta però no pot accedir a la xarxa interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-es-pot-resoldre-noms-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No es pot resoldre noms del domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracions-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consideracions de Seguretat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusió
       
     </span>
   </a>
@@ -941,88 +964,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuracio de VPN
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Configuracio de VPN
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../unidad4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuració de VPN per Connexió a Active Directory
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1152,25 +1093,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-1-configuracio-amb-menuconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 1: Configuració amb menuconfig
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part 1: Configuració amb menuconfig">
+    <nav class="md-nav" aria-label="Introducció">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-descomprimir-el-fitxer-del-kernel" class="md-nav__link">
+  <a href="#escenari" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Descomprimir el fitxer del kernel
+        Escenari
       
     </span>
   </a>
@@ -1178,10 +1108,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-opcions-de-configuracio-general" class="md-nav__link">
+  <a href="#arquitectura-de-la-xarxa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Opcions de Configuració General
+        Arquitectura de la Xarxa
       
     </span>
   </a>
@@ -1189,120 +1119,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-seleccio-de-networking-support" class="md-nav__link">
+  <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. Selecció de Networking Support
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-configuracio-guardada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Configuració Guardada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-inici-de-la-compilacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Inici de la Compilació
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-installacio-dels-moduls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6. Instal·lació dels Mòduls
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-creacio-del-paquet-del-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7. Creació del paquet del kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18-comprovacio-de-que-el-paquet-sha-creat-correctament" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8. Comprovacio de que el paquet s'ha creat correctament
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#19-installacio-del-paquet-del-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.9. Instal·lacio del paquet del kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#110-configuracio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.10. Configuracio del grub
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#111-update-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.11. Update GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#112-arrencada-del-sistema-amb-el-nou-kernel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.12. Arrencada del sistema amb el nou kernel
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#113-comprovacio-final" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.13. Comprovacio final
+        Objectius
       
     </span>
   </a>
@@ -1315,22 +1135,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-2-configuracio-amb-oldconfig" class="md-nav__link">
+  <a href="#part-1-configuracio-del-servidor-vpn-windows-server-2019" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 2: Configuracio amb oldconfig
+        Part 1: Configuració del Servidor VPN (Windows Server 2019)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part 2: Configuracio amb oldconfig">
+    <nav class="md-nav" aria-label="Part 1: Configuració del Servidor VPN (Windows Server 2019)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-paquets-al-source-list" class="md-nav__link">
+  <a href="#11-requisits-previs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Paquets al source-list
+        1.1. Requisits Previs
       
     </span>
   </a>
@@ -1338,10 +1158,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-copia-del-fitxer-mainc" class="md-nav__link">
+  <a href="#12-installacio-del-rol-de-acces-remot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Copia del fitxer main.c
+        1.2. Instal·lació del Rol de Accés Remot
       
     </span>
   </a>
@@ -1349,10 +1169,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-comprovacio-de-que-el-fitxer-sha-copiat-correctament" class="md-nav__link">
+  <a href="#13-configuracio-de-les-interficies-de-xarxa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Comprovacio de que el fitxer s'ha copiat correctament
+        1.3. Configuració de les Interfícies de Xarxa
       
     </span>
   </a>
@@ -1360,10 +1180,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-modificacio-del-fitxer-mainc" class="md-nav__link">
+  <a href="#14-configuracio-del-servei-de-routing-i-acces-remot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Modificacio del fitxer main.c
+        1.4. Configuració del Servei de Routing i Accés Remot
       
     </span>
   </a>
@@ -1371,10 +1191,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-comprovacio-de-que-el-fitxer-sha-modificat-correctament" class="md-nav__link">
+  <a href="#15-configuracio-del-pool-dadreces-vpn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Comprovacio de que el fitxer s'ha modificat correctament
+        1.5. Configuració del Pool d'Adreces VPN
       
     </span>
   </a>
@@ -1382,120 +1202,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-copia-de-la-configuracio-del-kernel-actual" class="md-nav__link">
+  <a href="#16-configuracio-de-nat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Còpia de la configuració del kernel actual
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-execucio-de-make-oldconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.7. Execució de make oldconfig
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#28-edicio-de-la-configuracio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.8. Edicio de la configuracio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#29-compilacio-del-kernel-modificat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.9. Compilació del kernel modificat
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#210-instalacio-dels-moduls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.10. Instalacio dels moduls
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#211-creacio-del-paquet-debian" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.11. Creació del paquet Debian
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#212-installacio-dels-paquets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.12. Instal·lacio dels paquets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#213-modificacio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.13. Modificacio del GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#214-actualitzacio-del-grub" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.14. Actualització del GRUB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#216-reinici-del-sistema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.16. Reinici del sistema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#217-verificacio-del-missatge-personalitzat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.17. Verificació del missatge personalitzat
+        1.6. Configuració de NAT
       
     </span>
   </a>
@@ -1508,10 +1218,182 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusio-final" class="md-nav__link">
+  <a href="#part-2-configuracio-del-client-vpn-windows-10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusio Final
+        Part 2: Configuració del Client VPN (Windows 10)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Configuració del Client VPN (Windows 10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-crear-una-nova-connexio-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Crear una Nova Connexió VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configurar-credencials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Configurar Credencials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-connectar-se-a-la-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Connectar-se a la VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-verificacio-de-la-connexio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Verificació de la Connexió
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Verificació de la Connexió">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-comprovar-la-connexio-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Comprovar la Connexió VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-comprovar-connectivitat-amb-la-xarxa-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Comprovar Connectivitat amb la Xarxa Interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-comprovar-acces-a-lactive-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Comprovar Accés a l'Active Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-unir-se-al-domini-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Unir-se al Domini (Opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucio-de-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolució de Problemes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolució de Problemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-client-no-es-pot-connectar-a-la-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El client no es pot connectar a la VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-client-es-connecta-pero-no-pot-accedir-a-la-xarxa-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El client es connecta però no pot accedir a la xarxa interna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-es-pot-resoldre-noms-del-domini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No es pot resoldre noms del domini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracions-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consideracions de Seguretat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusió
       
     </span>
   </a>
@@ -1535,124 +1417,191 @@
 
 
 
-<h1 id="installacio-i-configuracio-del-kernel-linux">Instal·lació i Configuració del Kernel Linux</h1>
+<h1 id="configuracio-de-vpn-per-connexio-a-active-directory">Configuració de VPN per Connexió a Active Directory</h1>
 <h2 id="introduccio">Introducció</h2>
-<p>Aquest document descriu el procés complet d'instal·lació i configuració d'un kernel Linux personalitzat, incloent la configuració amb <strong>menuconfig</strong> i <strong>oldconfig</strong>. S'ha modificat la configuració de xarxa (IP/TCP) i s'ha afegit un missatge personalitzat que apareix durant l'arrencada del sistema.</p>
+<p>Aquest document descriu el procés de configuració d'una <strong>VPN (Virtual Private Network)</strong> per permetre que un client Windows 10 remot es connecti a un <strong>Active Directory</strong> que es troba en una xarxa diferent.</p>
+<h3 id="escenari">Escenari</h3>
+<p>Tenim un <strong>Windows Server 2019</strong> amb Active Directory a la xarxa interna i un <strong>client Windows 10 remot</strong> que necessita connectar-se a l'AD des d'una ubicació externa mitjançant una VPN:</p>
+<ul>
+<li><strong>Xarxa Interna (192.168.2.0/24)</strong>: On es troba el Windows Server 2019 amb Active Directory</li>
+<li><strong>Client Remot (10.10.1.2)</strong>: Client W10 que vol accedir a l'AD des d'una ubicació externa</li>
+<li><strong>Xarxa VPN (172.16.0.0/16)</strong>: Xarxa virtual que permet la connexió segura</li>
+</ul>
+<h3 id="arquitectura-de-la-xarxa">Arquitectura de la Xarxa</h3>
+<p><img alt="Esquema de l'arquitectura VPN" src="../fotos/vpn_arquitectura.png" /></p>
+<p><strong>Descripció de l'arquitectura:</strong></p>
+<pre><code>Xarxa Interna (192.168.2.0/24)
+┌────────────────────────────────────┐
+│                                    │
+│         ┌──────────────┐           │
+│         │   Windows    │           │
+│         │   Server     │───────────┼──── Internet (VPN: 172.16.0.0/16)
+│         │   2019       │           │
+│         │  (AD + VPN)  │           │
+│         └──────────────┘           │
+│         192.168.2.101              │
+│         10.10.1.1 (externa)        │
+└────────────────────────────────────┘
+                 │
+                 │ Connexió VPN
+                 │
+            ┌────▼────┐
+            │   W10   │
+            │  Remot  │
+            └─────────┘
+            10.10.1.2
+</code></pre>
+<h3 id="objectius">Objectius</h3>
+<ol>
+<li>Configurar el <strong>Windows Server 2019</strong> com a servidor VPN</li>
+<li>Configurar les <strong>dues interfícies de xarxa</strong> del servidor:</li>
+<li>Interfície interna: <code>192.168.2.101/24</code> (anomenada "interna")</li>
+<li>Interfície externa: <code>10.10.1.1</code> (anomenada "externa")</li>
+<li>Configurar el <strong>client Windows 10</strong> per connectar-se a la VPN</li>
+<li>Verificar la connexió i l'accés a l'Active Directory</li>
+</ol>
 <hr />
-<h2 id="part-1-configuracio-amb-menuconfig">Part 1: Configuració amb menuconfig</h2>
-<h3 id="11-descomprimir-el-fitxer-del-kernel">1.1. Descomprimir el fitxer del kernel</h3>
-<p>Aqui tenim el fitxer del kernel descomprimit.</p>
-<p><img alt="Menú principal menuconfig" src="../fotos/17.png" /></p>
-<h3 id="12-opcions-de-configuracio-general">1.2. Opcions de Configuració General</h3>
-<p>Interfície principal de <code>make menuconfig</code> mostrant les categories de configuració del kernel.</p>
-<p>Visualització de les opcions generals de configuració del kernel.</p>
-<p><img alt="Opcions generals" src="../fotos/18.png" /></p>
-<h3 id="13-seleccio-de-networking-support">1.3. Selecció de Networking Support</h3>
-<p>Accés a la categoria <strong>Networking support</strong> per configurar les opcions de xarxa.</p>
-<p>Dins de Networking support, visualització de les opcions disponibles.</p>
-<p>Selecció de <strong>Networking options</strong> per configurar protocols de xarxa.</p>
-<p><img alt="Networking support" src="../fotos/19.png" /></p>
-<h3 id="14-configuracio-guardada">1.4. Configuració Guardada</h3>
-<p>Confirmació que la configuració s'ha escrit correctament al fitxer <code>.config</code></p>
-<p><img alt="Networking options" src="../fotos/21.png" /></p>
-<h3 id="15-inici-de-la-compilacio">1.5. Inici de la Compilació</h3>
-<p>Execució de la comanda <code>make</code> per compilar el kernel.</p>
-<pre><code class="language-bash">sudo make -j$(nproc)
+<h2 id="part-1-configuracio-del-servidor-vpn-windows-server-2019">Part 1: Configuració del Servidor VPN (Windows Server 2019)</h2>
+<h3 id="11-requisits-previs">1.1. Requisits Previs</h3>
+<p>Abans de començar, assegura't que:</p>
+<ul>
+<li>El Windows Server 2019 té <strong>dues interfícies de xarxa</strong> configurades</li>
+<li>El servidor té el rol d'<strong>Active Directory Domain Services</strong> instal·lat</li>
+<li>El servidor té connectivitat amb ambdues xarxes</li>
+</ul>
+<h3 id="12-installacio-del-rol-de-acces-remot">1.2. Instal·lació del Rol de Accés Remot</h3>
+<ol>
+<li>Obre el <strong>Server Manager</strong></li>
+<li>Selecciona <strong>Add Roles and Features</strong></li>
+<li>A <strong>Server Roles</strong>, selecciona <strong>Remote Access</strong></li>
+<li>A <strong>Role Services</strong>, selecciona:</li>
+<li><strong>DirectAccess and VPN (RAS)</strong></li>
+<li><strong>Routing</strong></li>
+<li>Completa la instal·lació</li>
+</ol>
+<h3 id="13-configuracio-de-les-interficies-de-xarxa">1.3. Configuració de les Interfícies de Xarxa</h3>
+<p>És important configurar correctament les dues interfícies:</p>
+<p><strong>Interfície Interna (192.168.2.101/24):</strong>
+- Nom: "interna"
+- IP: 192.168.2.101
+- Màscara: 255.255.255.0
+- Gateway: (deixar buit)</p>
+<p><strong>Interfície Externa (10.10.1.1):</strong>
+- Nom: "externa"
+- IP: 10.10.1.1
+- Aquesta interfície connecta amb la xarxa pública/externa</p>
+<h3 id="14-configuracio-del-servei-de-routing-i-acces-remot">1.4. Configuració del Servei de Routing i Accés Remot</h3>
+<ol>
+<li>Obre <strong>Routing and Remote Access</strong> des de les eines administratives</li>
+<li>Fes clic dret al servidor i selecciona <strong>Configure and Enable Routing and Remote Access</strong></li>
+<li>Selecciona <strong>Custom Configuration</strong></li>
+<li>Marca les opcions:</li>
+<li><strong>VPN access</strong></li>
+<li><strong>NAT</strong></li>
+<li>Inicia el servei quan se't demani</li>
+</ol>
+<h3 id="15-configuracio-del-pool-dadreces-vpn">1.5. Configuració del Pool d'Adreces VPN</h3>
+<ol>
+<li>A <strong>Routing and Remote Access</strong>, expandeix el servidor</li>
+<li>Fes clic dret a <strong>IPv4</strong> → <strong>Properties</strong></li>
+<li>A la pestanya <strong>General</strong>, marca <strong>Enable IPv4 Forwarding</strong></li>
+<li>A <strong>Static address pool</strong>, afegeix el rang d'adreces VPN:</li>
+<li>Adreça inicial: <code>172.16.0.10</code></li>
+<li>Adreça final: <code>172.16.0.100</code></li>
+<li>Nombre d'adreces: segons necessitats</li>
+</ol>
+<h3 id="16-configuracio-de-nat">1.6. Configuració de NAT</h3>
+<ol>
+<li>A <strong>Routing and Remote Access</strong>, expandeix <strong>IPv4</strong> → <strong>NAT</strong></li>
+<li>Fes clic dret a <strong>NAT</strong> → <strong>New Interface</strong></li>
+<li>Selecciona la interfície <strong>externa</strong></li>
+<li>Marca <strong>Public interface connected to the Internet</strong></li>
+<li>Marca <strong>Enable NAT on this interface</strong></li>
+</ol>
+<hr />
+<h2 id="part-2-configuracio-del-client-vpn-windows-10">Part 2: Configuració del Client VPN (Windows 10)</h2>
+<h3 id="21-crear-una-nova-connexio-vpn">2.1. Crear una Nova Connexió VPN</h3>
+<ol>
+<li>Obre <strong>Settings</strong> → <strong>Network &amp; Internet</strong> → <strong>VPN</strong></li>
+<li>Fes clic a <strong>Add a VPN connection</strong></li>
+<li>Configura els paràmetres:</li>
+<li><strong>VPN provider</strong>: Windows (built-in)</li>
+<li><strong>Connection name</strong>: Nom descriptiu (ex: "VPN AD Empresa")</li>
+<li><strong>Server name or address</strong>: <code>10.10.1.1</code> (IP de la interfície externa del servidor)</li>
+<li><strong>VPN type</strong>: Automatic (o PPTP/L2TP segons configuració)</li>
+<li><strong>Type of sign-in info</strong>: User name and password</li>
+</ol>
+<h3 id="22-configurar-credencials">2.2. Configurar Credencials</h3>
+<p>Utilitza les credencials d'un usuari del domini Active Directory:
+- <strong>Usuari</strong>: <code>DOMINI\usuari</code> o <code>usuari@domini.local</code>
+- <strong>Contrasenya</strong>: La contrasenya de l'usuari del domini</p>
+<h3 id="23-connectar-se-a-la-vpn">2.3. Connectar-se a la VPN</h3>
+<ol>
+<li>A <strong>Settings</strong> → <strong>Network &amp; Internet</strong> → <strong>VPN</strong></li>
+<li>Selecciona la connexió VPN creada</li>
+<li>Fes clic a <strong>Connect</strong></li>
+<li>Introdueix les credencials si se't demanen</li>
+</ol>
+<hr />
+<h2 id="part-3-verificacio-de-la-connexio">Part 3: Verificació de la Connexió</h2>
+<h3 id="31-comprovar-la-connexio-vpn">3.1. Comprovar la Connexió VPN</h3>
+<p>Un cop connectat, verifica:</p>
+<pre><code class="language-cmd">ipconfig /all
 </code></pre>
-<p>El procés de compilació està en curs, compilant els diferents components del kernel.</p>
-<p><img alt="Configuration written to .config" src="../fotos/22.png" /></p>
-<h3 id="16-installacio-dels-moduls">1.6. Instal·lació dels Mòduls</h3>
-<p>Instal·lació dels mòduls del kernel amb <code>sudo make modules_install</code>.</p>
-<pre><code class="language-bash">sudo make modules_install
+<p>Hauries de veure una nova interfície de xarxa amb una IP del rang VPN (172.16.0.x).</p>
+<h3 id="32-comprovar-connectivitat-amb-la-xarxa-interna">3.2. Comprovar Connectivitat amb la Xarxa Interna</h3>
+<p>Prova de fer ping al servidor AD:</p>
+<pre><code class="language-cmd">ping 192.168.2.101
 </code></pre>
-<p><img alt="Inici compilació" src="../fotos/23.png" /></p>
-<h3 id="17-creacio-del-paquet-del-kernel">1.7. Creació del paquet del kernel</h3>
-<p>Aqui executarem la comanda <code>sudo make bindeb-pkg</code> per crear el paquet del kernel.</p>
-<p><img alt="Creacio del paquet del kernel" src="../fotos/24.png" /></p>
-<h3 id="18-comprovacio-de-que-el-paquet-sha-creat-correctament">1.8. Comprovacio de que el paquet s'ha creat correctament</h3>
-<p>Amb un simple <code>ls</code> podem comprovar que el paquet s'ha creat correctament.</p>
-<p><img alt="Comprovacio de que el paquet s'ha creat correctament" src="../fotos/25.png" /></p>
-<h3 id="19-installacio-del-paquet-del-kernel">1.9. Instal·lacio del paquet del kernel</h3>
-<p>Per instal·lar el paquet del kernel, executarem la comanda <code>sudo dpkg -i linux-image-*.deb</code>i <code>sudo dpkg -i linux-headers-*.deb</code>.</p>
-<p><img alt="Instal·lacio del paquet del kernel" src="../fotos/26.png" /></p>
-<p><img alt="Instal·lacio del paquet del kernel" src="../fotos/27.png" /></p>
-<h3 id="110-configuracio-del-grub">1.10. Configuracio del grub</h3>
-<p>Configurarem estes opcions per tener el menu al arrancar per elegir el kernel que vols utilitzar.</p>
-<p><img alt="Configuracio del grub" src="../fotos/28.png" /></p>
-<h3 id="111-update-grub">1.11. Update GRUB</h3>
-<p>Executarem la comanda <code>sudo update-grub</code> per actualitzar el GRUB.</p>
-<p><img alt="Update GRUB" src="../fotos/29.png" /></p>
-<h3 id="112-arrencada-del-sistema-amb-el-nou-kernel">1.12. Arrencada del sistema amb el nou kernel</h3>
-<p>Arrencarem el sistema amb el nou kernel.</p>
-<p><img alt="Arrencada del sistema amb el nou kernel" src="../fotos/30.png" /></p>
-<h3 id="113-comprovacio-final">1.13. Comprovacio final</h3>
-<p>Com podem veure no tenim acces a la part de xarxa que habiem desactivat en el menuconfig.</p>
-<p><img alt="Comprovacio final" src="../fotos/31.png" /></p>
-<h2 id="part-2-configuracio-amb-oldconfig">Part 2: Configuracio amb oldconfig</h2>
-<h3 id="21-paquets-al-source-list">2.1. Paquets al source-list</h3>
-<p>Afegirem els paquets necessaris per a la configuracio amb oldconfig.</p>
-<p><img alt="Paquets al source" src="../fotos/32.png" /></p>
-<h3 id="22-copia-del-fitxer-mainc">2.2. Copia del fitxer main.c</h3>
-<p>Copiem el fitxer main.c per a poder-lo modificar sense perdre el fitxer original.</p>
-<p><img alt="Copia del fitxer main.c" src="../fotos/33.png" /></p>
-<h3 id="23-comprovacio-de-que-el-fitxer-sha-copiat-correctament">2.3. Comprovacio de que el fitxer s'ha copiat correctament</h3>
-<p>Amb un simple <code>ls</code> podem comprovar que el fitxer s'ha copiat correctament.</p>
-<p><img alt="Comprovacio de que el fitxer s'ha copiat correctament" src="../fotos/34.png" /></p>
-<h3 id="24-modificacio-del-fitxer-mainc">2.4. Modificacio del fitxer main.c</h3>
-<p>Modifiquem el fitxer main.c per a afegir el missatge personalitzat.</p>
-<p><img alt="Modificacio del fitxer main.c" src="../fotos/35.png" /></p>
-<h3 id="25-comprovacio-de-que-el-fitxer-sha-modificat-correctament">2.5. Comprovacio de que el fitxer s'ha modificat correctament</h3>
-<p>Amb un simple <code>grep</code> podem comprovar que el fitxer s'ha modificat correctament.</p>
-<p><img alt="Comprovacio de que el fitxer s'ha modificat correctament" src="../fotos/36.png" /></p>
-<h3 id="26-copia-de-la-configuracio-del-kernel-actual">2.6. Còpia de la configuració del kernel actual</h3>
-<p>Copiem la configuració del kernel actual del sistema al fitxer <code>.config</code> per utilitzar-la com a base:</p>
-<pre><code class="language-bash">sudo cp /boot/config-6.14.0-36-generic .config
+<h3 id="33-comprovar-acces-a-lactive-directory">3.3. Comprovar Accés a l'Active Directory</h3>
+<p>Prova de resoldre el nom del domini:</p>
+<pre><code class="language-cmd">nslookup domini.local
 </code></pre>
-<p><img alt="Còpia de la configuració" src="../fotos/37.png" /></p>
-<h3 id="27-execucio-de-make-oldconfig">2.7. Execució de make oldconfig</h3>
-<p>Executem <code>make oldconfig</code> per aplicar la configuració anterior al codi font modificat:</p>
-<pre><code class="language-bash">make oldconfig
-</code></pre>
-<p><img alt="Execució de make oldconfig" src="../fotos/38.png" /></p>
-<h3 id="28-edicio-de-la-configuracio">2.8. Edicio de la configuracio</h3>
-<p>Editem el .config els parametres mostrats en la foto.</p>
-<p><img alt="Edicio de la configuracio" src="../fotos/39.png" /></p>
-<h3 id="29-compilacio-del-kernel-modificat">2.9. Compilació del kernel modificat</h3>
-<p>Iniciem la compilació del kernel amb el missatge personalitzat afegit:</p>
-<pre><code class="language-bash">sudo make -j$(nproc)
-</code></pre>
-<p><img alt="Inici compilació modificat" src="../fotos/40.png" /></p>
-<h3 id="210-instalacio-dels-moduls">2.10. Instalacio dels moduls</h3>
-<p>Instal·lem els mòduls del kernel amb <code>sudo make modules_install</code>.</p>
-<p><img alt="Instal·lacio dels moduls" src="../fotos/41.png" /></p>
-<h3 id="211-creacio-del-paquet-debian">2.11. Creació del paquet Debian</h3>
-<p>Creació del paquet <code>.deb</code> del kernel compilat amb <code>make bindeb-pkg</code></p>
-<p><img alt="Continuació compilació" src="../fotos/42.png" /></p>
-<h3 id="212-installacio-dels-paquets">2.12. Instal·lacio dels paquets</h3>
-<p>Instal·lem els paquets del kernel i els headers:</p>
-<pre><code class="language-bash">sudo dpkg -i linux-image-*.deb
-sudo dpkg -i linux-headers-*.deb
-</code></pre>
-<p><img alt="Instal·lacio paquets" src="../fotos/43.png" /></p>
-<p><img alt="Instal·lacio paquets" src="../fotos/44.png" /></p>
-<h3 id="213-modificacio-del-grub">2.13. Modificacio del GRUB</h3>
-<p>Modifiquem el GRUB per incloure el menu per seleccionar el kernel que vols utilitzar.</p>
-<p><img alt="Modificacio del GRUB" src="../fotos/45.png" /></p>
-<h3 id="214-actualitzacio-del-grub">2.14. Actualització del GRUB</h3>
-<p>Actualitzem el GRUB per incloure el nou kernel:</p>
-<pre><code class="language-bash">sudo update-grub
-</code></pre>
-<p><img alt="Actualització GRUB" src="../fotos/46.png" /></p>
-<h3 id="216-reinici-del-sistema">2.16. Reinici del sistema</h3>
-<p>Reiniciem el sistema per arrencar amb el nou kernel modificat:</p>
-<pre><code class="language-bash">sudo reboot
-</code></pre>
-<p><img alt="Reinici sistema" src="../fotos/47.png" /></p>
-<h3 id="217-verificacio-del-missatge-personalitzat">2.17. Verificació del missatge personalitzat</h3>
-<p>Durant l'arrencada del sistema, podem veure el missatge personalitzat que hem afegit amb <code>printk()</code> al codi del kernel.</p>
-<p><img alt="Missatge personalitzat visible" src="../fotos/48.png" /></p>
-<h2 id="conclusio-final">Conclusio Final</h2>
-<p>En aquesta unitat hem aprendut com aquesta tecnologia ens permet crear un kernel personalitzat i com podem utilitzar-lo per a la nostra necessitat. </p>
+<h3 id="34-unir-se-al-domini-opcional">3.4. Unir-se al Domini (Opcional)</h3>
+<p>Si el client no està unit al domini, pots unir-lo ara:</p>
+<ol>
+<li><strong>System Properties</strong> → <strong>Computer Name</strong> → <strong>Change</strong></li>
+<li>Selecciona <strong>Domain</strong> i introdueix el nom del domini</li>
+<li>Introdueix credencials d'administrador del domini</li>
+<li>Reinicia el sistema</li>
+</ol>
+<hr />
+<h2 id="resolucio-de-problemes">Resolució de Problemes</h2>
+<h3 id="el-client-no-es-pot-connectar-a-la-vpn">El client no es pot connectar a la VPN</h3>
+<ul>
+<li>Verifica que el servei <strong>Routing and Remote Access</strong> està en execució</li>
+<li>Comprova que el firewall permet el trànsit VPN (ports 1723 per PPTP, 1701 per L2TP)</li>
+<li>Verifica les credencials de l'usuari</li>
+</ul>
+<h3 id="el-client-es-connecta-pero-no-pot-accedir-a-la-xarxa-interna">El client es connecta però no pot accedir a la xarxa interna</h3>
+<ul>
+<li>Verifica que el <strong>NAT</strong> està configurat correctament</li>
+<li>Comprova que el <strong>IP Forwarding</strong> està habilitat</li>
+<li>Verifica les rutes de xarxa amb <code>route print</code></li>
+</ul>
+<h3 id="no-es-pot-resoldre-noms-del-domini">No es pot resoldre noms del domini</h3>
+<ul>
+<li>Verifica que el servidor DNS està configurat correctament</li>
+<li>Comprova que el client VPN està rebent la configuració DNS del servidor</li>
+<li>Verifica que el servidor AD està funcionant correctament</li>
+</ul>
+<hr />
+<h2 id="consideracions-de-seguretat">Consideracions de Seguretat</h2>
+<ol>
+<li><strong>Utilitza protocols segurs</strong>: Preferiblement L2TP/IPsec o IKEv2 en lloc de PPTP</li>
+<li><strong>Contraseñes fortes</strong>: Assegura't que els usuaris tenen contrasenyes robustes</li>
+<li><strong>Firewall</strong>: Configura el firewall per permetre només el trànsit necessari</li>
+<li><strong>Auditoria</strong>: Activa el registre d'esdeveniments per monitoritzar les connexions VPN</li>
+<li><strong>Actualitzacions</strong>: Mantén el servidor i els clients actualitzats</li>
+</ol>
+<hr />
+<h2 id="conclusio">Conclusió</h2>
+<p>Amb aquesta configuració, hem aconseguit:</p>
+<p>✅ Configurar un servidor VPN en Windows Server 2019<br />
+✅ Connectar un client remot a través de la VPN<br />
+✅ Permetre l'accés a l'Active Directory des d'una xarxa externa<br />
+✅ Establir una connexió segura entre dues xarxes diferents  </p>
+<p>Aquesta solució permet als usuaris remots accedir als recursos del domini com si estiguessin a la xarxa local, mantenint la seguretat i el control d'accés centralitzat de l'Active Directory.</p>
 
 
 
